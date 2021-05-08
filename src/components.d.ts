@@ -7,8 +7,6 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AppRoot {
-        "maxFontSize": number;
-        "minFontSize": number;
     }
 }
 declare global {
@@ -24,8 +22,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface AppRoot {
-        "maxFontSize"?: number;
-        "minFontSize"?: number;
     }
     interface IntrinsicElements {
         "app-root": AppRoot;

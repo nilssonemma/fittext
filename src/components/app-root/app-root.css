@@ -4,12 +4,11 @@
   align-items: center;
   background-color: lavender;
   height: 100vh;
-  padding: 1em;
+  padding: 10px;
 }
 form {
   display: flex;
   border: 1px solid gray;
-
   width: 80%;
   max-width: 30em;
   flex-direction: column;
@@ -23,11 +22,11 @@ form > input[type='text'] {
   border: 1px solid gray;
   width: 100%;
   border-radius: 0.2em;
-  padding: 1em .5em;
+  padding: 1em 0.5em;
   margin-bottom: 2em;
 }
 form > input[type='text']:focus-within {
-  border-color:purple;
+  border-color: purple;
   outline: none;
 }
 form > p {
@@ -37,29 +36,26 @@ form > p {
 }
 #output {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   border: 1px solid grey;
   border-radius: 5px;
   background-color: white;
   height: 50px;
-  width: 100%;
-  line-height: 50px;
-  font-size: 100%;
+  padding: 0.5em 1em;
   white-space: nowrap;
-  padding: 0.5em;
 }
-form > input[type=range] {
+form > input[type='range'] {
   width: 100%;
   -webkit-appearance: none;
 }
-input[type=range]::-webkit-slider-runnable-track {
+input[type='range']::-webkit-slider-runnable-track {
   height: 5px;
   background: #ddd;
   border: none;
   border-radius: 3px;
 }
-input[type=range]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
   height: 16px;
@@ -67,6 +63,4 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 50%;
   background: purple;
   margin-top: -4px;
-}
-@media screen {
 }

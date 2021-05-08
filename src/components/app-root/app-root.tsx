@@ -1,4 +1,4 @@
-import { Component, h, Prop, State } from '@stencil/core'
+import { Component, h, State } from '@stencil/core'
 import { fittext } from './fittext'
 
 @Component({
@@ -9,8 +9,6 @@ import { fittext } from './fittext'
 export class AppRoot {
   @State() outputWidth: string = '100'
   @State() maxOutputWidth: number = 500
-  @Prop() minFontSize: number = 8 // if fontsize == minfontsize, cannot put more in input?
-  @Prop() maxFontSize: number = 45
   @State() textContent: string
 
   componentWillLoad() {
@@ -44,12 +42,12 @@ export class AppRoot {
           onInput={(e: Event) => this.onInputChanged(e)}
           placeholder="Enter text"
         ></input>
-        <p>Select with of output div</p>
+        <p>Select width of output div</p>
         <input
           type="range"
           id="slider"
           min="1"
-          max={window.innerWidth + 20} //FIXA
+          max={window.innerWidth - 70}
           value={this.outputWidth}
           onInput={(e: Event) => this.onRangeChanged(e)}
         ></input>
@@ -58,7 +56,7 @@ export class AppRoot {
         id="output"
         style={{
           width: this.outputWidth + 'px',
-          maxWidth: window.innerWidth - 20 + 'px',
+          maxWidth: window.innerWidth - 70 + 'px',
         }}
       >
         <p style={{ fontSize: '12px' }}>{this.textContent}</p>
