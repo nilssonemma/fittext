@@ -7,7 +7,8 @@ import { fittext } from './fittext'
   scoped: true,
 })
 export class AppRoot {
-  @State() outputWidth: string = '100px' //rename
+  @State() outputWidth: string = '100'
+  @State() maxOutputWidth: number = 500
   @Prop() minFontSize: number = 8 // if fontsize == minfontsize, cannot put more in input?
   @Prop() maxFontSize: number = 45
   @State() textContent: string
@@ -17,13 +18,15 @@ export class AppRoot {
     if (output) this.outputWidth = output
     const textContent = localStorage.getItem('textContent')
     if (textContent) this.textContent = textContent
-    // set slider value
   }
   componentDidLoad() {
+    ;(document.getElementById(
+      'slider',
+    ) as HTMLInputElement).value = this.outputWidth
     fittext('#output')
   }
   onRangeChanged(event: Event) {
-    this.outputWidth = (event.target as HTMLInputElement).value + 'px'
+    this.outputWidth = (event.target as HTMLInputElement).value
     localStorage.setItem('output', this.outputWidth)
     fittext('#output')
   }
@@ -39,16 +42,25 @@ export class AppRoot {
           type="text"
           value={this.textContent}
           onInput={(e: Event) => this.onInputChanged(e)}
+          placeholder="Enter text"
         ></input>
+        <p>Select with of output div</p>
         <input
           type="range"
           id="slider"
           min="1"
-          max="500"
+          max={window.innerWidth + 20} //FIXA
+          value={this.outputWidth}
           onInput={(e: Event) => this.onRangeChanged(e)}
         ></input>
       </form>,
-      <div id="output" style={{ width: this.outputWidth }}>
+      <div
+        id="output"
+        style={{
+          width: this.outputWidth + 'px',
+          maxWidth: window.innerWidth - 20 + 'px',
+        }}
+      >
         <p style={{ fontSize: '12px' }}>{this.textContent}</p>
       </div>,
     ]
