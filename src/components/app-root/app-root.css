@@ -15,7 +15,7 @@ form {
   align-items: center;
   background-color: white;
   padding: 1.5em;
-  border-radius: 5px;
+  border-radius: .3em;
   margin-bottom: 2em;
 }
 form > input[type='text'] {
@@ -34,33 +34,33 @@ form > p {
   color: grey;
   font-size: 12px;
 }
-#output {
+div#output {
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid grey;
-  border-radius: 5px;
+  border-radius: .3em;
   background-color: white;
   height: 50px;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   white-space: nowrap;
 }
 form > input[type='range'] {
   width: 100%;
   -webkit-appearance: none;
 }
-input[type='range']::-webkit-slider-runnable-track {
-  height: 5px;
+form > input[type='range']::-webkit-slider-runnable-track {
+  height: .3em;
   background: #ddd;
   border: none;
-  border-radius: 3px;
+  border-radius: .2em;
 }
-input[type='range']::-webkit-slider-thumb {
+form > input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
-  height: 16px;
-  width: 16px;
+  height: 1em;
+  width: 1em;
   border-radius: 50%;
   background: purple;
-  margin-top: -4px;
+  margin-top: -.35em;
 }

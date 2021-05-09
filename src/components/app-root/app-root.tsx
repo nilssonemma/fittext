@@ -8,7 +8,6 @@ import { fittext } from './fittext'
 })
 export class AppRoot {
   @State() outputWidth: string = '100'
-  @State() maxOutputWidth: number = 500
   @State() textContent: string
 
   componentWillLoad() {
@@ -28,7 +27,7 @@ export class AppRoot {
     localStorage.setItem('output', this.outputWidth)
     fittext('#output')
   }
-  onInputChanged(event?: Event) {
+  onInputChanged(event: Event) {
     this.textContent = (event.target as HTMLInputElement).value
     localStorage.setItem('textContent', this.textContent)
     fittext('#output')
