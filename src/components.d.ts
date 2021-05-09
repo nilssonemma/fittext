@@ -6,32 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppRoot {
+    interface FitTextDemo {
     }
 }
 declare global {
-    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
+    interface HTMLFitTextDemoElement extends Components.FitTextDemo, HTMLStencilElement {
     }
-    var HTMLAppRootElement: {
-        prototype: HTMLAppRootElement;
-        new (): HTMLAppRootElement;
+    var HTMLFitTextDemoElement: {
+        prototype: HTMLFitTextDemoElement;
+        new (): HTMLFitTextDemoElement;
     };
     interface HTMLElementTagNameMap {
-        "app-root": HTMLAppRootElement;
+        "fit-text-demo": HTMLFitTextDemoElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppRoot {
+    interface FitTextDemo {
     }
     interface IntrinsicElements {
-        "app-root": AppRoot;
+        "fit-text-demo": FitTextDemo;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "fit-text-demo": LocalJSX.FitTextDemo & JSXBase.HTMLAttributes<HTMLFitTextDemoElement>;
         }
     }
 }

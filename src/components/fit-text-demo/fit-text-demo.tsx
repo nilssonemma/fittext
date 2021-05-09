@@ -1,9 +1,9 @@
 import { Component, h, State } from '@stencil/core'
-import { fittext } from './fittext'
+import { fittext } from '../../fittext'
 
 @Component({
-  tag: 'app-root',
-  styleUrl: 'app-root.css',
+  tag: 'fit-text-demo',
+  styleUrl: 'fit-text-demo.css',
   scoped: true,
 })
 export class AppRoot {

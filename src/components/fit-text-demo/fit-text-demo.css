@@ -15,7 +15,7 @@ form {
   align-items: center;
   background-color: white;
   padding: 1.5em;
-  border-radius: .3em;
+  border-radius: 0.3em;
   margin-bottom: 2em;
 }
 form > input[type='text'] {
@@ -39,7 +39,7 @@ div#output {
   align-items: center;
   justify-content: center;
   border: 1px solid grey;
-  border-radius: .3em;
+  border-radius: 0.3em;
   background-color: white;
   height: 50px;
   padding: 0.5em;
@@ -50,10 +50,10 @@ form > input[type='range'] {
   -webkit-appearance: none;
 }
 form > input[type='range']::-webkit-slider-runnable-track {
-  height: .3em;
+  height: 0.3em;
   background: #ddd;
   border: none;
-  border-radius: .2em;
+  border-radius: 0.2em;
 }
 form > input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -62,5 +62,5 @@ form > input[type='range']::-webkit-slider-thumb {
   width: 1em;
   border-radius: 50%;
   background: purple;
-  margin-top: -.35em;
+  margin-top: -0.35em;
 }
